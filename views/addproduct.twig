@@ -1,0 +1,30 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <h1 style="text-align:center">Add product</h1>
+  <hr/>
+  <form method="post" action="http://localhost:3000/products/addProduct">
+    <table>
+        <tr>
+            <td><label for="libelle">Libelle</label></td>
+            <td><input type="text" name="libelle" id="libelle" /></td>
+        </tr>
+        <tr>
+            <td><label for="prix">Price</label></td>
+            <td><input type="number" name="prix" id="prix" /></td>
+        </tr>
+        <tr>
+            <td><label for="password">Description</label></td>
+            <td><input type="text" name="description" id="description" /></td>
+        </tr>
+        <tr>
+            <td><label for="quantite">Quantite</label></td>
+            <td><input type="number" name="quantite" id="quantite" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Ajouter produit" /></td>
+        </tr>
+    </table>
+  </form>
+{% endblock %}
